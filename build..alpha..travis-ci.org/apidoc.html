@@ -1,0 +1,789 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://hgoebl.github.io/mobile-detect.js/"
+
+    >mobile-detect (v1.3.5)</a>
+</h1>
+<h4>Device detection (phone, tablet, desktop, mobile grade, os, versions)</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mobile-detect">module mobile-detect</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mobile-detect.isPhoneSized">
+            function <span class="apidocSignatureSpan">mobile-detect.</span>isPhoneSized
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mobile-detect.</span>_impl</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">mobile-detect.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mobile-detect._impl">module mobile-detect._impl</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mobile-detect._impl.detectOS">
+            function <span class="apidocSignatureSpan">mobile-detect._impl.</span>detectOS
+            <span class="apidocSignatureSpan">(ua)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mobile-detect._impl.findMatch">
+            function <span class="apidocSignatureSpan">mobile-detect._impl.</span>findMatch
+            <span class="apidocSignatureSpan">(rules, userAgent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mobile-detect._impl.findMatches">
+            function <span class="apidocSignatureSpan">mobile-detect._impl.</span>findMatches
+            <span class="apidocSignatureSpan">(rules, userAgent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mobile-detect._impl.getDeviceSmallerSide">
+            function <span class="apidocSignatureSpan">mobile-detect._impl.</span>getDeviceSmallerSide
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mobile-detect._impl.getVersion">
+            function <span class="apidocSignatureSpan">mobile-detect._impl.</span>getVersion
+            <span class="apidocSignatureSpan">(propertyName, userAgent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mobile-detect._impl.getVersionStr">
+            function <span class="apidocSignatureSpan">mobile-detect._impl.</span>getVersionStr
+            <span class="apidocSignatureSpan">(propertyName, userAgent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mobile-detect._impl.isMobileFallback">
+            function <span class="apidocSignatureSpan">mobile-detect._impl.</span>isMobileFallback
+            <span class="apidocSignatureSpan">(userAgent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mobile-detect._impl.isTabletFallback">
+            function <span class="apidocSignatureSpan">mobile-detect._impl.</span>isTabletFallback
+            <span class="apidocSignatureSpan">(userAgent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mobile-detect._impl.mobileGrade">
+            function <span class="apidocSignatureSpan">mobile-detect._impl.</span>mobileGrade
+            <span class="apidocSignatureSpan">(t)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mobile-detect._impl.prepareDetectionCache">
+            function <span class="apidocSignatureSpan">mobile-detect._impl.</span>prepareDetectionCache
+            <span class="apidocSignatureSpan">(cache, userAgent, maxPhoneWidth)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mobile-detect._impl.prepareVersionNo">
+            function <span class="apidocSignatureSpan">mobile-detect._impl.</span>prepareVersionNo
+            <span class="apidocSignatureSpan">(version)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mobile-detect._impl.</span>detectMobileBrowsers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mobile-detect._impl.</span>mobileDetectRules</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">mobile-detect._impl.</span>FALLBACK_MOBILE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">mobile-detect._impl.</span>FALLBACK_PHONE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">mobile-detect._impl.</span>FALLBACK_TABLET</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mobile-detect" id="apidoc.module.mobile-detect">module mobile-detect</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mobile-detect.isPhoneSized" id="apidoc.element.mobile-detect.isPhoneSized">
+        function <span class="apidocSignatureSpan">mobile-detect.</span>isPhoneSized
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isPhoneSized = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    cache.mobile = cache.phone = phone;
+    cache.tablet = null;
+    return; // unambiguously identified as phone
+}
+
+// our rules haven&#x27;t found a match -&#x3e; try more general fallback rules
+if (impl.isMobileFallback(userAgent)) {
+    phoneSized = MobileDetect.<span class="apidocCodeKeywordSpan">isPhoneSized</span>(maxPhoneWidth);
+    if (phoneSized === undefined) {
+        cache.mobile = impl.FALLBACK_MOBILE;
+        cache.tablet = cache.phone = null;
+    } else if (phoneSized) {
+        cache.mobile = cache.phone = impl.FALLBACK_PHONE;
+        cache.tablet = null;
+    } else {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mobile-detect._impl" id="apidoc.module.mobile-detect._impl">module mobile-detect._impl</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mobile-detect._impl.detectOS" id="apidoc.element.mobile-detect._impl.detectOS">
+        function <span class="apidocSignatureSpan">mobile-detect._impl.</span>detectOS
+        <span class="apidocSignatureSpan">(ua)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">detectOS = function (ua) {
+    return impl.findMatch(impl.mobileDetectRules.oss0, ua) ||
+        impl.findMatch(impl.mobileDetectRules.oss, ua);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * iOS, MeeGoOS, MaemoOS, JavaOS, webOS, badaOS, BREWOS&#x3c;/tt&#x3e;&#x3c;br&#x3e;
+ *
+ * @returns {String} the key for the detected operating system.
+ * @function MobileDetect#os
+ */
+os: function () {
+    if (this._cache.os === undefined) {
+        this._cache.os = impl.<span class="apidocCodeKeywordSpan">detectOS</span>(this.ua);
+    }
+    return this._cache.os;
+},
+
+/**
+ * Get the version (as Number) of the given property in the User-Agent.
+ * &#x3c;br&#x3e;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mobile-detect._impl.findMatch" id="apidoc.element.mobile-detect._impl.findMatch">
+        function <span class="apidocSignatureSpan">mobile-detect._impl.</span>findMatch
+        <span class="apidocSignatureSpan">(rules, userAgent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findMatch = function (rules, userAgent) {
+    for (var key in rules) {
+        if (hasOwnProp.call(rules, key)) {
+            if (rules[key].test(userAgent)) {
+                return key;
+            }
+        }
+    }
+    return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    impl.prepareDetectionCache = function (cache, userAgent, maxPhoneWidth) {
+if (cache.mobile !== undefined) {
+    return;
+}
+var phone, tablet, phoneSized;
+
+// first check for stronger tablet rules, then phone (see issue#5)
+tablet = impl.<span class="apidocCodeKeywordSpan">findMatch</span>(impl.mobileDetectRules.tablets, userAgent);
+if (tablet) {
+    cache.mobile = cache.tablet = tablet;
+    cache.phone = null;
+    return; // unambiguously identified as tablet
+}
+
+phone = impl.findMatch(impl.mobileDetectRules.phones, userAgent);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mobile-detect._impl.findMatches" id="apidoc.element.mobile-detect._impl.findMatches">
+        function <span class="apidocSignatureSpan">mobile-detect._impl.</span>findMatches
+        <span class="apidocSignatureSpan">(rules, userAgent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findMatches = function (rules, userAgent) {
+    var result = [];
+    for (var key in rules) {
+        if (hasOwnProp.call(rules, key)) {
+            if (rules[key].test(userAgent)) {
+                result.push(key);
+            }
+        }
+    }
+    return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * providing one of the defined keys as first argument to {@link MobileDetect#is}.
+ *
+ * @returns {Array} the array of detected user-agent keys or &#x3c;tt&#x3e;[]&#x3c;/tt&#x3e;
+ * @function MobileDetect#userAgents
+ */
+userAgents: function () {
+    if (this._cache.userAgents === undefined) {
+        this._cache.userAgents = impl.<span class="apidocCodeKeywordSpan">findMatches</span>(impl.mobileDetectRules.uas, this.ua
+);
+    }
+    return this._cache.userAgents;
+},
+
+/**
+ * Returns the detected operating system string or &#x3c;tt&#x3e;null&#x3c;/tt&#x3e;.
+ * &#x3c;br&#x3e;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mobile-detect._impl.getDeviceSmallerSide" id="apidoc.element.mobile-detect._impl.getDeviceSmallerSide">
+        function <span class="apidocSignatureSpan">mobile-detect._impl.</span>getDeviceSmallerSide
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDeviceSmallerSide = function () {
+    return window.screen.width &#x3c; window.screen.height ?
+        window.screen.width :
+        window.screen.height;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        return this._cache.grade;
+    }
+};
+
+// environment-dependent
+if (typeof window !== &#x27;undefined&#x27; &#x26;&#x26; window.screen) {
+    MobileDetect.isPhoneSized = function (maxPhoneWidth) {
+        return maxPhoneWidth &#x3c; 0 ? undefined : impl.<span class="apidocCodeKeywordSpan">getDeviceSmallerSide</span>() &#x3c
+;= maxPhoneWidth;
+    };
+} else {
+    MobileDetect.isPhoneSized = function () {};
+}
+
+// should not be replaced by a completely new object - just overwrite existing methods
+MobileDetect._impl = impl;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mobile-detect._impl.getVersion" id="apidoc.element.mobile-detect._impl.getVersion">
+        function <span class="apidocSignatureSpan">mobile-detect._impl.</span>getVersion
+        <span class="apidocSignatureSpan">(propertyName, userAgent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getVersion = function (propertyName, userAgent) {
+    var version = impl.getVersionStr(propertyName, userAgent);
+    return version ? impl.prepareVersionNo(version) : NaN;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Phone, Windows CE, Windows NT, Symbian, webOS&#x3c;/tt&#x3e;&#x3c;br&#x3e;
+ *
+ * @returns {Number} the version as float or &#x3c;tt&#x3e;NaN&#x3c;/tt&#x3e; if User-Agent doesn&#x27;t contain this version.
+ *          Be careful when comparing this value with &#x27;==&#x27; operator!
+ * @function MobileDetect#version
+ */
+version: function (key) {
+    return impl.<span class="apidocCodeKeywordSpan">getVersion</span>(key, this.ua);
+},
+
+/**
+ * Get the version (as String) of the given property in the User-Agent.
+ * &#x3c;br&#x3e;
+ *
+ * @param {String} key a key defining a thing which has a version.&#x3c;br&#x3e;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mobile-detect._impl.getVersionStr" id="apidoc.element.mobile-detect._impl.getVersionStr">
+        function <span class="apidocSignatureSpan">mobile-detect._impl.</span>getVersionStr
+        <span class="apidocSignatureSpan">(propertyName, userAgent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getVersionStr = function (propertyName, userAgent) {
+    var props = impl.mobileDetectRules.props, patterns, i, len, match;
+    if (hasOwnProp.call(props, propertyName)) {
+        patterns = props[propertyName];
+        len = patterns.length;
+        for (i = 0; i &#x3c; len; ++i) {
+            match = patterns[i].exec(userAgent);
+            if (match !== null) {
+                return match[1];
+            }
+        }
+    }
+    return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * @param {String} propertyName
+ * @param {String} userAgent
+ * @return {Number} version or &#x3c;tt&#x3e;NaN&#x3c;/tt&#x3e; if version not found
+ * @private
+ */
+impl.getVersion = function (propertyName, userAgent) {
+    var version = impl.<span class="apidocCodeKeywordSpan">getVersionStr</span>(propertyName, userAgent);
+    return version ? impl.prepareVersionNo(version) : NaN;
+};
+
+/**
+ * Prepare the version number.
+ *
+ * @param {String} version
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mobile-detect._impl.isMobileFallback" id="apidoc.element.mobile-detect._impl.isMobileFallback">
+        function <span class="apidocSignatureSpan">mobile-detect._impl.</span>isMobileFallback
+        <span class="apidocSignatureSpan">(userAgent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isMobileFallback = function (userAgent) {
+    return impl.detectMobileBrowsers.fullPattern.test(userAgent) ||
+        impl.detectMobileBrowsers.shortPattern.test(userAgent.substr(0,4));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (phone) {
+    cache.mobile = cache.phone = phone;
+    cache.tablet = null;
+    return; // unambiguously identified as phone
+}
+
+// our rules haven&#x27;t found a match -&#x3e; try more general fallback rules
+if (impl.<span class="apidocCodeKeywordSpan">isMobileFallback</span>(userAgent)) {
+    phoneSized = MobileDetect.isPhoneSized(maxPhoneWidth);
+    if (phoneSized === undefined) {
+        cache.mobile = impl.FALLBACK_MOBILE;
+        cache.tablet = cache.phone = null;
+    } else if (phoneSized) {
+        cache.mobile = cache.phone = impl.FALLBACK_PHONE;
+        cache.tablet = null;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mobile-detect._impl.isTabletFallback" id="apidoc.element.mobile-detect._impl.isTabletFallback">
+        function <span class="apidocSignatureSpan">mobile-detect._impl.</span>isTabletFallback
+        <span class="apidocSignatureSpan">(userAgent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isTabletFallback = function (userAgent) {
+    return impl.detectMobileBrowsers.tabletPattern.test(userAgent);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        } else if (phoneSized) {
+            cache.mobile = cache.phone = impl.FALLBACK_PHONE;
+            cache.tablet = null;
+        } else {
+            cache.mobile = cache.tablet = impl.FALLBACK_TABLET;
+            cache.phone = null;
+        }
+    } else if (impl.<span class="apidocCodeKeywordSpan">isTabletFallback</span>(userAgent)) {
+        cache.mobile = cache.tablet = impl.FALLBACK_TABLET;
+        cache.phone = null;
+    } else {
+        // not mobile at all!
+        cache.mobile = cache.tablet = cache.phone = null;
+    }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mobile-detect._impl.mobileGrade" id="apidoc.element.mobile-detect._impl.mobileGrade">
+        function <span class="apidocSignatureSpan">mobile-detect._impl.</span>mobileGrade
+        <span class="apidocSignatureSpan">(t)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mobileGrade = function (t) {
+    // impl note:
+    // To keep in sync w/ Mobile_Detect.php easily, the following code is tightly aligned to the PHP version.
+    // When changes are made in Mobile_Detect.php, copy this method and replace:
+    //     $this-&#x3e; / t.
+    //     self::MOBILE_GRADE_(.) / &#x27;$1&#x27;
+    //     , self::VERSION_TYPE_FLOAT / (nothing)
+    //     isIOS() / os(&#x27;iOS&#x27;)
+    //     [reg] / (nothing)   &#x3c;-- jsdelivr complaining about unescaped unicode character U+00AE
+    var $isMobile = t.mobile() !== null;
+
+    if (
+        // Apple iOS 3.2-5.1 - Tested on the original iPad (4.3 / 5.0), iPad 2 (4.3), iPad 3 (5.1), original iPhone (3.1), iPhone
+ 3 (3.2), 3GS (4.3), 4 (4.3 / 5.0), and 4S (5.1)
+        t.os(&#x27;iOS&#x27;) &#x26;&#x26; t.version(&#x27;iPad&#x27;)&#x3e;=4.3 ||
+        t.os(&#x27;iOS&#x27;) &#x26;&#x26; t.version(&#x27;iPhone&#x27;)&#x3e;=3.1 ||
+        t.os(&#x27;iOS&#x27;) &#x26;&#x26; t.version(&#x27;iPod&#x27;)&#x3e;=3.1 ||
+
+        // Android 2.1-2.3 - Tested on the HTC Incredible (2.2), original Droid (2.2), HTC Aria (2.1), Google Nexus S (2.3). Functional
+ on 1.5 &#x26; 1.6 but performance may be sluggish, tested on Google G1 (1.5)
+        // Android 3.1 (Honeycomb)  - Tested on the Samsung Galaxy Tab 10.1 and Motorola XOOM
+        // Android 4.0 (ICS)  - Tested on a Galaxy Nexus. Note: transition performance can be poor on upgraded devices
+        // Android 4.1 (Jelly Bean)  - Tested on a Galaxy Nexus and Galaxy 7
+        ( t.version(&#x27;Android&#x27;)&#x3e;2.1 &#x26;&#x26; t.is(&#x27;Webkit&#x27;) ) ||
+
+        // Windows Phone 7-7.5 - Tested on the HTC Surround (7.0) HTC Trophy (7.5), LG-E900 (7.5), Nokia Lumia 800
+        t.version(&#x27;Windows Phone OS&#x27;)&#x3e;=7.0 ||
+
+        // Blackberry 7 - Tested on BlackBerry Torch 9810
+        // Blackberry 6.0 - Tested on the Torch 9800 and Style 9670
+        t.is(&#x27;BlackBerry&#x27;) &#x26;&#x26; t.version(&#x27;BlackBerry&#x27;)&#x3e;=6.0 ||
+        // Blackberry Playbook (1.0-2.0) - Tested on PlayBook
+        t.match(&#x27;Playbook.*Tablet&#x27;) ||
+
+        // Palm WebOS (1.4-2.0) - Tested on the Palm Pixi (1.4), Pre (1.4), Pre 2 (2.0)
+        ( t.version(&#x27;webOS&#x27;)&#x3e;=1.4 &#x26;&#x26; t.match(&#x27;Palm|Pre|Pixi&#x27;) ) ||
+        // Palm WebOS 3.0  - Tested on HP TouchPad
+        t.match(&#x27;hp.*TouchPad&#x27;) ||
+
+        // Firefox Mobile (12 Beta) - Tested on Android 2.3 device
+        ( t.is(&#x27;Firefox&#x27;) &#x26;&#x26; t.version(&#x27;Firefox&#x27;)&#x3e;=12 ) ||
+
+        // Chrome for Android - Tested on Android 4.0, 4.1 device
+        ( t.is(&#x27;Chrome&#x27;) &#x26;&#x26; t.is(&#x27;AndroidOS&#x27;) &#x26;&#x26; t.version(&#x27;Android&#x27;)&#x3e;=4.0 ) ||
+
+        // Skyfire 4.1 - Tested on Android 2.3 device
+        ( t.is(&#x27;Skyfire&#x27;) &#x26;&#x26; t.version(&#x27;Skyfire&#x27;)&#x3e;=4.1 &#x26;&#x26; t.is(&#x27;AndroidOS&#x27;) &#x26;&#x26; t.version(&#x27;Android&#x27;)&#x3e;=2.3 ) ||
+
+        // Opera Mobile 11.5-12: Tested on Android 2.3
+        ( t.is(&#x27;Opera&#x27;) &#x26;&#x26; t.version(&#x27;Opera Mobi&#x27;)&#x3e;11 &#x26;&#x26; t.is(&#x27;AndroidOS&#x27;) ) ||
+
+        // Meego 1.2 - Tested on Nokia 950 and N9
+        t.is(&#x27;MeeGoOS&#x27;) ||
+
+        // Tizen (pre-release) - Tested on early hardware
+        t.is(&#x27;Tizen&#x27;) ||
+
+        // Samsung Bada 2.0 - Tested on a Samsung Wave 3, Dolphin browser
+        // @todo: more tests here!
+        t.is(&#x27;Dolfin&#x27;) &#x26;&#x26; t.version(&#x27;Bada&#x27;)&#x3e;=2.0 ||
+
+        // UC Browser - Tested on Android 2.3 device
+        ( (t.is(&#x27;UC Browser&#x27;) || t.is(&#x27;Dolfin&#x27;)) &#x26;&#x26; t.version(&#x27;Android&#x27;)&#x3e;=2.3 ) ||
+
+        // Kindle 3 and Fire  - Tested on the built-in WebKit browser for each
+        ( t.match(&#x27;Kindle Fire&#x27;) ||
+            t.is(&#x27;Kindle&#x27;) &#x26;&#x26; t.version(&#x27;Kindle&#x27;)&#x3e;=3.0 ) ||
+
+        // Nook Color 1.4.1 - Tested on original Nook Color, not Nook Tablet
+        t.is(&#x27;AndroidOS&#x27;) &#x26;&#x26; t.is(&#x27;NookTablet&#x27;) ||
+
+        // Chrome Desktop 11-21 - Tested on OS X 10.7 and Windows 7
+        t.version(&#x27;Chrome&#x27;)&#x3e;=11 &#x26;&#x26; !$isMobile ||
+
+        // Safari Desktop 4-5 - Tested on OS X 10.7 and Windows 7
+        t.version(&#x27;Safari&#x27;)&#x3e;=5.0 &#x26;&#x26; !$isMobile ||
+
+        // Firefox Desktop 4-13 - Tested on OS X 10.7 and Windows 7
+        t.version(&#x27;Firefox&#x27;)&#x3e;=4.0 &#x26;&#x26; !$isMobile ||
+
+        // Internet Explorer 7-9 - Tested on Windows XP, Vista and 7
+        t.version(&#x27;MSIE&#x27;)&#x3e;=7.0 &#x26;&#x26; !$isMobile ||
+
+        // Opera Desktop 10-12 - Tested on OS X 10.7 and Windows 7
+        // @reference: http://my.opera.com/community/openweb/idopera/
+        t.version(&#x27;Opera&#x27;)&#x3e;=10 &#x26;&#x26; !$isMobile ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*     &#x3c;strong&#x3e;Find information how to download and install:&#x3c;/strong&#x3e;
+*     &#x3c;a href=&#x22;https://github.com/hgoebl/mobile-detect.js/&#x22;&#x3e;github.com/hgoebl/mobile-detect.js/&#x3c;/a&#x3e
+;
+* &#x3c;/div&#x3e;
+*
+* @example &#x3c;pre&#x3e;
+*     var md = new MobileDetect(window.navigator.userAgent);
+*     if (md.mobile()) {
+*         location.href = (md.<span class="apidocCodeKeywordSpan">mobileGrade</span>() === &#x27;A&#x27;) ? &#x27;/mobile/&#x27; : &#
+x27;/lynx/&#x27;;
+*     }
+* &#x3c;/pre&#x3e;
+*
+* @param {string} userAgent typically taken from window.navigator.userAgent or http_header[&#x27;User-Agent&#x27;]
+* @param {number} [maxPhoneWidth=600] &#x3c;strong&#x3e;only for browsers&#x3c;/strong&#x3e; specify a value for the maximum
+*        width of smallest device side (in logical &#x22;CSS&#x22; pixels) until a device detected as mobile will be handled
+*        as phone.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mobile-detect._impl.prepareDetectionCache" id="apidoc.element.mobile-detect._impl.prepareDetectionCache">
+        function <span class="apidocSignatureSpan">mobile-detect._impl.</span>prepareDetectionCache
+        <span class="apidocSignatureSpan">(cache, userAgent, maxPhoneWidth)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prepareDetectionCache = function (cache, userAgent, maxPhoneWidth) {
+    if (cache.mobile !== undefined) {
+        return;
+    }
+    var phone, tablet, phoneSized;
+
+    // first check for stronger tablet rules, then phone (see issue#5)
+    tablet = impl.findMatch(impl.mobileDetectRules.tablets, userAgent);
+    if (tablet) {
+        cache.mobile = cache.tablet = tablet;
+        cache.phone = null;
+        return; // unambiguously identified as tablet
+    }
+
+    phone = impl.findMatch(impl.mobileDetectRules.phones, userAgent);
+    if (phone) {
+        cache.mobile = cache.phone = phone;
+        cache.tablet = null;
+        return; // unambiguously identified as phone
+    }
+
+    // our rules haven&#x27;t found a match -&#x3e; try more general fallback rules
+    if (impl.isMobileFallback(userAgent)) {
+        phoneSized = MobileDetect.isPhoneSized(maxPhoneWidth);
+        if (phoneSized === undefined) {
+            cache.mobile = impl.FALLBACK_MOBILE;
+            cache.tablet = cache.phone = null;
+        } else if (phoneSized) {
+            cache.mobile = cache.phone = impl.FALLBACK_PHONE;
+            cache.tablet = null;
+        } else {
+            cache.mobile = cache.tablet = impl.FALLBACK_TABLET;
+            cache.phone = null;
+        }
+    } else if (impl.isTabletFallback(userAgent)) {
+        cache.mobile = cache.tablet = impl.FALLBACK_TABLET;
+        cache.phone = null;
+    } else {
+        // not mobile at all!
+        cache.mobile = cache.tablet = cache.phone = null;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * &#x3c;br&#x3e;
+ * In most cases you will use the return value just as a boolean.
+ *
+ * @returns {String} the key for the phone family or tablet family, e.g. &#x22;Nexus&#x22;.
+ * @function MobileDetect#mobile
+ */
+mobile: function () {
+    impl.<span class="apidocCodeKeywordSpan">prepareDetectionCache</span>(this._cache, this.ua, this.maxPhoneWidth);
+    return this._cache.mobile;
+},
+
+/**
+ * Returns the detected phone type/family string or &#x3c;tt&#x3e;null&#x3c;/tt&#x3e;.
+ * &#x3c;br&#x3e;
+ * The returned tablet (family or producer) is one of following keys:&#x3c;br&#x3e;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mobile-detect._impl.prepareVersionNo" id="apidoc.element.mobile-detect._impl.prepareVersionNo">
+        function <span class="apidocSignatureSpan">mobile-detect._impl.</span>prepareVersionNo
+        <span class="apidocSignatureSpan">(version)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prepareVersionNo = function (version) {
+    var numbers;
+
+    numbers = version.split(/[a-z._ \/\-]/i);
+    if (numbers.length === 1) {
+        version = numbers[0];
+    }
+    if (numbers.length &#x3e; 1) {
+        version = numbers[0] + &#x27;.&#x27;;
+        numbers.shift();
+        version += numbers.join(&#x27;&#x27;);
+    }
+    return Number(version);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {String} propertyName
+ * @param {String} userAgent
+ * @return {Number} version or &#x3c;tt&#x3e;NaN&#x3c;/tt&#x3e; if version not found
+ * @private
+ */
+impl.getVersion = function (propertyName, userAgent) {
+    var version = impl.getVersionStr(propertyName, userAgent);
+    return version ? impl.<span class="apidocCodeKeywordSpan">prepareVersionNo</span>(version) : NaN;
+};
+
+/**
+ * Prepare the version number.
+ *
+ * @param {String} version
+ * @return {Number} the version number as a floating number
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
